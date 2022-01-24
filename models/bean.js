@@ -10,7 +10,7 @@ const beanSchema = new Schema({
     price: Number,
     brewmethod: {
         type: String,
-        enum: ['espresso', 'drip', 'pourover', 'press', 'coldbrew', 'cupping', 'siphon', 'aeropress', 'mokapot', 'vaccumpot', 'turkish', 'other']
+        enum: ['espresso', 'drip', 'pourover', 'press', 'coldbrew', 'cupping', 'aeropress', 'mokapot', 'vaccumpot', 'turkish', 'other']
     },
     beverage: String,
     review: String,
