@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<form>
+<form id="new-form" action="/beans" method="post">
 
     <label>Roaster:</label>
     <input type="text" name="roaster">
@@ -14,9 +14,9 @@
         <option value="dark">Dark</option>        
     </select>
     <label>Roast Date:</label>
-    <input type="datetime-local">
+    <input type="date">
     <label>Brew Date:</label>
-    <input type='datetime-local'>
+    <input type='date'>
     <label>Price</label>
     <input type="text" name="price">
     <label>Brew Methods:</label>
@@ -34,6 +34,8 @@
         <option value="turkish">Turkish</option>        
         <option value="other">Other</option>
     </select>
+    <label>Beverage:</label>
+    <textarea type="text" name="beverage"></textarea>
     <label>Review:</label>
     <textarea name="content"></textarea>
     <label>Rating:</label>

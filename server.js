@@ -12,6 +12,7 @@ require('./config/database');
 require('./config/passport');
 
 var indexRouter = require('./routes/home');
+var beansRouter = require('./routes/beans');
 var usersRouter = require('./routes/users');
 
 var app = express();
@@ -43,6 +44,7 @@ app.use(function (req, res, next) {
 
 const isLoggedIn = require('./config/auth');
 
+app.use('/beans', beansRouter);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
