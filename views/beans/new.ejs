@@ -1,0 +1,50 @@
+<%- include('../partials/header') %>
+
+<form>
+
+    <label>Roaster:</label>
+    <input type="text" name="roaster">
+    <label>Roast:</label>
+    <select name="roast">
+        <option value="green">Green</option>
+        <option value="blonde">Blonde</option>
+        <option value="light">Light</option>
+        <option value="medium">Medium</option>
+        <option value="medium-dark">Medium-Dark</option>
+        <option value="dark">Dark</option>        
+    </select>
+    <label>Roast Date:</label>
+    <input type="datetime-local">
+    <label>Brew Date:</label>
+    <input type='datetime-local'>
+    <label>Price</label>
+    <input type="text" name="price">
+    <label>Brew Methods:</label>
+    <select name="brewMethod">
+        <option value="espresso">Espresso</option>
+        <option value="drip">Drip</option>
+        <option value="pourover">Pour-Over</option>
+        <option value="press">Press</option>
+        <option value="coldbrew">Cold Brew</option>
+        <option value="cupping">Cupping</option>
+        <option value="siphon">Siphon</option>        
+        <option value="aeropress">Aeropress</option>        
+        <option value="mokapot">Moka Pot</option>        
+        <option value="vaccumpot">Vaccum Pot</option>        
+        <option value="turkish">Turkish</option>        
+        <option value="other">Other</option>
+    </select>
+    <label>Review:</label>
+    <textarea name="content"></textarea>
+    <label>Rating:</label>
+    <select name="rating">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <input type="submit" value="Add My Coffee">
+</form>
+
+<%- include('../partials/footer') %>
