@@ -1,7 +1,12 @@
 <%- include('../partials/header') %>
 
+<a href="/beans/show">View My Coffee Tastings</a>
+
+<h1>Add A New Tasting Experience!</h1>
 <form id="new-form" action="/beans" method="post">
 
+    <label>Coffee origin/ Name:</label>
+    <input type="text" name="coffeename">
     <label>Roaster:</label>
     <input type="text" name="roaster">
     <label>Roast:</label>
@@ -14,13 +19,13 @@
         <option value="dark">Dark</option>        
     </select>
     <label>Roast Date:</label>
-    <input type="date">
+    <input type="date" name="roastdate">
     <label>Brew Date:</label>
-    <input type='date'>
+    <input type="date" name="brewdate">
     <label>Price</label>
     <input type="text" name="price">
     <label>Brew Methods:</label>
-    <select name="brewMethod">
+    <select name="brewmethod">
         <option value="espresso">Espresso</option>
         <option value="drip">Drip</option>
         <option value="pourover">Pour-Over</option>
@@ -37,7 +42,7 @@
     <label>Beverage:</label>
     <textarea type="text" name="beverage"></textarea>
     <label>Review:</label>
-    <textarea name="content"></textarea>
+    <textarea name="review"></textarea>
     <label>Rating:</label>
     <select name="rating">
       <option value="1">1</option>
@@ -48,5 +53,14 @@
     </select>
     <input type="submit" value="Add My Coffee">
 </form>
+
+<h1>Your Coffee Tasting Guide</h1>
+<p>Cup your hand over the coffee, hold the cup close
+ to your nose and inhale. When tasting a coffee, it's 
+ important to slurp it. Slurping sprays the coffee across 
+ your entire palate and lets subtle flavors and aromas reach 
+ your nose. Think about where you are experiencing flavors on 
+ your tongue.
+</p>
 
 <%- include('../partials/footer') %>
