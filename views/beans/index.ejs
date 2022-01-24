@@ -1,4 +1,52 @@
 <%- include('../partials/header') %>
 <a href="/beans/new">Add beans</a>
 
+<% beans.forEach(function(b) { %>
+    <table id="coffeelist">
+      <tr>
+          <th>Coffee origin/ Name:</th>
+          <td><%= b.coffeename %></td>
+      </tr>
+      <tr>
+          <th>Roaster:</th>
+          <td><%= b.roaster %></td>
+      </tr>
+      <tr>
+          <th>Roast:</th>
+          <td><%= b.roast %></td>
+      </tr>
+      <tr>
+          <th>Roast Date:</th>
+          <td><%= b.roastdate %></td>
+      </tr>
+      <tr>
+          <th>Brew Date:</th>
+          <td><%= b.brewdate %></td>
+      </tr>
+      <tr>
+          <th>Price:</th>
+          <td><%= b.price %></td>
+      </tr>
+      <tr>
+          <th>Brew Method:</th>
+          <td><%= b.brewmethod %></td>
+      </tr>
+      <tr>
+          <th>Beverage:</th>
+          <td><%= b.beverage %></td>
+      </tr>
+      <tr>
+          <th>Review:</th>
+          <td><%= b.review %></td>
+      </tr>
+      <tr>
+          <th>Rating:</th>
+          <td><%= b.rating %></td>
+      </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+<% }); %>
+    
 <%- include('../partials/footer') %>
