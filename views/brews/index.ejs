@@ -1,12 +1,38 @@
 <%- include('../partials/header') %>
 
-<h1>Brewing Methods!</h1>
+<h2>favorites:</h2>
+<section id="fav-container">
 
-<a href="/brews/index">Pour Over/Drip</a>
-<a href="/brews/index">Press</a>
-<a href="/brews/index">Espresso</a>
-<a href="/brews/index">Moka Pot</a>
-<a href="/brews/index">Vaccum Pot</a>
-<a href="/brews/index">Cold Brew</a>
+</section>
+    
+<h2>Brewing Methods!</h2>
+
+<div class="tabs">
+    <div class="tab">
+       <input type="checkbox" id="chck1">
+       <label class="tab-label" for="chck1">Press</label>
+       <div class="tab-content">
+          pressinfo
+       </div>
+    </div>
+    <div class="tab">
+       <input type="checkbox" id="chck2">
+       <label class="tab-label" for="chck2">Pour over/Drip</label>
+       <div class="tab-content">
+            1. Bring at least 600 grams (20 oz) of water to a boil.<br>
+            2. Grind coffee to a coarseness resembling sea salt. For blends, we recommend using 30 grams of coffee.<br>
+            3. Place a filter in the dripper. It is recommend wetting the filter with hot water and then dumping the water before proceeding with brewing.<br>
+            4. Add the ground coffee to the filter and gently tap it to level the surface of the grounds.<br>
+            5. There will be four pours total for this coffee preparation. This is the first, and the most magical, because it is when you will see the coffee “bloom.” As hot water first hits the grounds, Co2 is released creating a blossoming effect—the grounds will rise up en masse.<br>
+            Start a timer. Begin pouring water slowly over the coffee, starting at the outer rim and moving in a steady spiral toward the center of the grounds. Stop pouring when the scale reaches 60 grams. Make sure all the grounds are saturated, even if you need to add a little water. The pour should take about 15 seconds. Give the coffee an additional 30 seconds to drip before moving on to the second pour.<br>
+            6. Starting in the center of the grounds, pour in a steady spiral toward the outer edge and then back toward the center. Be sure to pour all the way out to the edge over the ripples in the filter. This helps to keep grounds from being trapped in there and removed from the rest of the extraction. Add roughly 90 grams, bringing the total to 150 grams. The goal during this pour is to sink all of the grounds on the surface of the bed. This creates a gentle turbulence that “stirs” the coffee, allowing water to more evenly extract the grounds. Allow 45–65 seconds to elapse.<br>
+            7. As the mixture of water and coffee from the second pour drops to the bottom of the filter, coming close to the level of the grounds, pour an additional 100 grams of water using the same pattern as the second pour. This brings the total up to 250 grams and should take 15–20 seconds.<br>
+            8. When the water and coffee from the third pour drops to the bottom of the filter, complete your fourth and final pour. Add 100 grams, bringing the total up to 350 grams of water. This pour should take 20 seconds.<br>
+       </div>
+    </div>
+ </div>
+
+
+
 
 <%- include('../partials/footer') %>

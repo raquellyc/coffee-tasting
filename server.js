@@ -13,8 +13,7 @@ require('./config/passport');
 
 var indexRouter = require('./routes/home');
 var beansRouter = require('./routes/beans');
-// var brewsRouter = require('./routes/brews');
-var usersRouter = require('./routes/users');
+var brewsRouter = require('./routes/brews');
 
 var app = express();
 
@@ -47,8 +46,7 @@ const isLoggedIn = require('./config/auth');
 
 app.use('/', indexRouter);
 app.use('/beans', beansRouter);
-// app.use('/brews', brewsRouter);
-app.use('/users', usersRouter);
+app.use('/brews', brewsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
