@@ -15,6 +15,7 @@ var indexRouter = require('./routes/home');
 var beansRouter = require('./routes/beans');
 var brewsRouter = require('./routes/brews');
 
+
 var app = express();
 
 // view engine setup
@@ -47,6 +48,7 @@ const isLoggedIn = require('./config/auth');
 app.use('/', indexRouter);
 app.use('/beans', beansRouter);
 app.use('/brews', brewsRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
