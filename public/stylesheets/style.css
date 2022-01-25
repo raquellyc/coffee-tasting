@@ -16,7 +16,7 @@ body {
 
 body > nav {
   grid-area: nav;
-  background-color: #ecbd66;
+  background-color: #d1964c;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -28,13 +28,8 @@ body > main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #E8ECEB;
   padding: 20px;
   overflow-y: scroll;
-}
-
-body > main h1:first-child {
-  margin-bottom: 50px;
 }
 
 nav > a {
@@ -46,7 +41,7 @@ nav > a {
 
 nav > a:hover:not(.active) {
   color: white;
-  background-color: #ca7b05;
+  background-color: #d1a570;
 }
 
 nav > a.active {
@@ -65,17 +60,6 @@ nav > a.active {
   height: 30px;
 }
 
-.review-user {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.review-user img {
-  border-radius: 50%;
-  height: 40px;
-}
-
 #new-form {
   display: grid;
   grid-gap: 10px;
@@ -85,9 +69,7 @@ nav > a.active {
   border-radius: 5px;
 }
 
-#new-form *,
-#add-review-form *,
-#add-performer-form * {
+#new-form * {
   font-size: 20px;
   padding: 5px;
   border-radius: 5px;
@@ -99,45 +81,28 @@ nav > a.active {
   margin-left: auto;
 }
 
-table {
-  font-size: 20px;
-}
+/* Start of collapse coffee method */
 
-table thead th {
-  padding: 5px;
-  border-bottom: 2px solid #424748;
-}
-
-table td {
-  padding: 10px;
-  text-align: center;
-}
-
-.tabs {
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
-}
- 
 .tab {
   width: 100%;
-  color: white;
   overflow: hidden;
 }
+
 .tab-label {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
           justify-content: space-between;
   padding: 1em;
-  background: #e9c318;
+  background: #bccfae;
   font-weight: bold;
-  cursor: pointer;
   /* Icon */
 }
+
 .tab-label:hover {
-  background: #dbf0a9;
+  background: #a7ca8d;
 }
+
 .tab-label::after {
   content: "\276F";
   width: 1em;
@@ -146,6 +111,7 @@ table td {
   -webkit-transition: all .35s;
   transition: all .35s;
 }
+
 .tab-content {
   max-height: 0;
   padding: 0 1em;
@@ -156,7 +122,7 @@ table td {
 }
 
 input:checked + .tab-label {
-  background: #dfd98b;
+  background: #6b815a;
 }
 
 input:checked + .tab-label::after {
@@ -168,8 +134,9 @@ input:checked ~ .tab-content {
   max-height: 100vh;
   padding: 1em;
 }
-input {
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
+
+/* end of collapse coffee method */
+
+#home {
+  text-align: center;
 }
