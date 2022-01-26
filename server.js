@@ -14,7 +14,7 @@ require('./config/passport');
 var indexRouter = require('./routes/home');
 var beansRouter = require('./routes/beans');
 var brewsRouter = require('./routes/brews');
-
+var reviewsRouter = require('./routes/reviews');
 
 var app = express();
 
@@ -46,9 +46,9 @@ app.use(function (req, res, next) {
 const isLoggedIn = require('./config/auth');
 
 app.use('/', indexRouter);
-app.use('/beans', beansRouter);
+app.use('/beans', isLoggedIn, beansRouter);
 app.use('/brews', brewsRouter);
-
+app.use('/', isLoggedIn, reviewsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

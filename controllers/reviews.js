@@ -19,14 +19,11 @@ function deleteReview(req, res) {
 
 function create(req, res) {
   Bean.findById(req.params.id, function(err, bean) {
-    // Add the user-centric info to req.body
     req.body.user = req.user._id;
     req.body.userName = req.user.name;
     req.body.userAvatar = req.user.avatar;
-    // We can push in subdoc objects into Mongoose arrays
     bean.reviews.push(req.body);
     bean.save(function(err) {
-      // Step 5: Respond with a redirect because we've mutated data
       res.redirect(`/beans/${bean._id}`);
     });
   });
