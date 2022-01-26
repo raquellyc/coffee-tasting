@@ -7,5 +7,6 @@ router.get('/', beansCtrl.index);
 router.get('/new', beansCtrl.new);
 router.get('/:id', beansCtrl.show);
 router.post('/', beansCtrl.create);
+router.delete('/beans/:id', beansCtrl.delete);
 
 module.exports = router;

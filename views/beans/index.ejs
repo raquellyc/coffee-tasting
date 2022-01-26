@@ -1,7 +1,12 @@
 <%- include('../partials/header') %>
 <a href="/beans/new">Add beans</a>
 
+
 <% beans.forEach(function(b) { %>
+    
+    <form action="/beans/?_method=DELETE" method="delete">
+        <button type="submit">delete</button>
+    </form>
     <table id="coffeelist">
       <tr>
           <th>Coffee origin/ Name:</th>

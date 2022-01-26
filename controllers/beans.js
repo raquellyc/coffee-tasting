@@ -4,7 +4,8 @@ module.exports = {
     show,
     new: newBeans,
     create,
-    index
+    index,
+    delete: deleteBean
 };
 
 function index(req, res) {
@@ -32,5 +33,17 @@ function create(req, res) {
         if (err) return res.redirect('/beans/new');
         res.redirect('/beans')
     });
+}
+
+function deleteBean(req, res) {
+    Bean.findById(req.params.id)
+    .then(function(bean) {
+        if (!bean) return res.redirect('/beans');
+        bean.beans.remove(req.params.id);
+        return bean.save();
+    })
+    .then(function(bean) {
+        res.redirect(`/beans/${bean._id}`);
+      });
 }
 
