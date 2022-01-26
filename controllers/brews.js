@@ -3,5 +3,5 @@ module.exports = {
 };
 
 function index(req, res) {
-    res.render('brews/index', { title: 'brew Method'});
+    res.render('brews/index', { title: 'Brew Methods'});
 }

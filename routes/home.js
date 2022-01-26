@@ -1,10 +1,20 @@
 var express = require('express');
 var router = express.Router();
 const passport = require('passport');
+const { find } = require('../models/bean');
+const Bean = require('../models/bean');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('home', { title: 'Express' });
+  Bean.find({}, function(err, beans) {
+    beans = beans.map(b => ({
+      _id: b._id, 
+      coffeename: b.coffeename, 
+      avgRating: b.reviews.reduce((sum, r) => sum + r.rating, 0) / b.reviews.length
+    }));
+    beans.sort((a, b) => b.avgRating - a.avgRating);
+    res.render('home', { title: 'COFFEE HOME', beans });
+  })
 });
 
 router.get('/auth/google', passport.authenticate(

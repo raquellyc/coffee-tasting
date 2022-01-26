@@ -1,17 +1,17 @@
 * {
   box-sizing: border-box;
-  font-family: Helvetica;
+  font-family: 'Josefin Slab', serif;  
   color: #1b1003;
 }
 
 body {
   margin: 0;
   height: 100vh;
-  display: grid;
+  /* display: grid;
   grid-template-rows: 50px 1fr;
   grid-template-areas: 
     "nav"
-    "main"
+    "main" */
 }
 
 body > nav {

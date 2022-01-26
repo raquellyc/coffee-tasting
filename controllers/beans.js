@@ -16,12 +16,12 @@ function index(req, res) {
 function show(req, res) {
     Bean.findById(req.params.id)
     .exec(function (err, bean) {
-        res.render('beans/show', { title: 'Bean Detail', bean});
+        res.render('beans/show', { title: 'Bean Details', bean});
     });
 }
 
 function newBeans(req, res) {
-    res.render('beans/new', { title: 'Add Beans' });
+    res.render('beans/new', { title: 'Add Coffee' });
 }
 
 function create(req, res) {
