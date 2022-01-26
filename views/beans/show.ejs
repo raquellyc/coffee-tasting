@@ -1,6 +1,48 @@
 <%- include('../partials/header') %>
 
- <h1>Top Charts for You!</h1>
+
+<table id="show-page">
+    <tr>
+        <th>Coffee origin/ Name:</th>
+        <td><%= bean.coffeename %></td>
+    </tr>
+    <tr>
+        <th>Roaster:</th>
+        <td><%= bean.roaster %></td>
+    </tr>
+    <tr>
+        <th>Roast:</th>
+        <td><%= bean.roast %></td>
+    </tr>
+    <tr>
+        <th>Roast Date:</th>
+        <td><%= bean.roastdate %></td>
+    </tr>
+    <tr>
+        <th>Brew Date:</th>
+        <td><%= bean.brewdate %></td>
+    </tr>
+    <tr>
+        <th>Price:</th>
+        <td><%= bean.price %></td>
+    </tr>
+    <tr>
+        <th>Brew Method:</th>
+        <td><%= bean.brewmethod %></td>
+    </tr>
+    <tr>
+        <th>Beverage:</th>
+        <td><%= bean.beverage %></td>
+    </tr>
+    <tr>
+        <th>Review:</th>
+        <td><%= bean.review %></td>
+    </tr>
+    <tr>
+        <th>Rating:</th>
+        <td><%= bean.rating %></td>
+    </tr>
+</table>
 
 
 <%- include('../partials/footer') %>

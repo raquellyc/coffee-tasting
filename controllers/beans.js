@@ -5,45 +5,30 @@ module.exports = {
     new: newBeans,
     create,
     index,
-    delete: deleteBean
 };
 
 function index(req, res) {
-    Bean.find({})
-    .then(function (beans) {
-      res.render('beans/index', { title: 'All Beans', beans });
+    Bean.find({}, function(err, beans) {
+      res.render('beans/index', { title: 'My Coffee', beans });
     })
-    .catch(function (err) {
-      res.redirect('/beans');
-    });
+}
+
+function show(req, res) {
+    Bean.findById(req.params.id)
+        res.render('beans/show', { title: 'Bean Detail'});
 }
 
 function newBeans(req, res) {
     res.render('beans/new', { title: 'Add Beans' });
 }
 
-function show(req, res) {
-    Bean.findById(req.params.id)
-    res.render('beans/show', { title: 'View My Coffee Tastings'});
-}
-
 function create(req, res) {
+    // req.body.user = req.user._id;
     const bean = new Bean(req.body);
     bean.save(function(err) {
-        if (err) return res.redirect('/beans/new');
+        if (err) return res.render('beans/new');
         res.redirect('/beans')
     });
 }
 
-function deleteBean(req, res) {
-    Bean.findById(req.params.id)
-    .then(function(bean) {
-        if (!bean) return res.redirect('/beans');
-        bean.beans.remove(req.params.id);
-        return bean.save();
-    })
-    .then(function(bean) {
-        res.redirect(`/beans/${bean._id}`);
-      });
-}
 

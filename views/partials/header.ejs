@@ -11,8 +11,8 @@
       <a href="/">HOME</a>
       <a href="/brews">BREW METHODS</a>
       <% if (user) { %>
-        <a href="/beans/show">RATINGS</a>
-        <a href="/beans" <%- title === 'My Coffee' ? 'class="active"' : '' %> >MY COFFEE</a>
+        <a href="/beans/new">ADD COFFEE</a>
+        <a href="/beans" >MY COFFEE</a>
         <a href="/logout">LOG OUT</a>
       <% } else { %>
         <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
