@@ -6,22 +6,6 @@
 <h1 id="home">Welcome!</h1>
 <% } %>
 
-<table id="ratinglist">
-    <thead>
-      <tr>
-        <th>Coffee Origin/ Name:</th>
-        <th>rating</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% bean.reviews.forEach(function(b) { %>
-        <tr>
-          <td><%= b.coffeename %></td>
-          <td><%= b.rating %></td>
-        </tr>
-        <% }); %>
-      </tbody>
-</table>
+
 
 <%- include('./partials/footer') %>

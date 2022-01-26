@@ -27,6 +27,7 @@ function newBeans(req, res) {
 function create(req, res) {
     req.body.user = req.user._id;
     const bean = new Bean(req.body);
+    console.log('bean', bean)
     bean.save(function(err) {
         if (err) return res.render('beans/new');
         res.redirect('/beans')

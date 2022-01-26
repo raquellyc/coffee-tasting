@@ -9,10 +9,14 @@
     </thead>
     <tbody>
       <% beans.forEach(function(b) { %>
+        <% console.log (b.user._id ) %>
+        <% console.log (user._id ) %>
+        <% if (user._id.toString() === b.user._id.toString() ) {%>
         <tr>
           <td><%= b.coffeename %></td>
           <td><a href="/beans/<%= b._id %>">View</a></td>
         </tr>
+        <% } %>
         <% }); %>
       </tbody>
 </table>

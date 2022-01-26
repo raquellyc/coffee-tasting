@@ -17,6 +17,7 @@ const reviewsSchema = new Schema({
 });
 
 const beanSchema = new Schema({
+    user: {type: Schema.Types.ObjectId, ref: 'User'},
     coffeename: String,
     roaster: String,
     roast: String,
