@@ -2,7 +2,8 @@ const Bean = require('../models/bean');
 
 module.exports = {
   create,
-  delete: deleteReview
+  delete: deleteReview,
+  allBeanReviews
 };
 
 function deleteReview(req, res) {
@@ -27,4 +28,10 @@ function create(req, res) {
       res.redirect(`/beans/${bean._id}`);
     });
   });
+}
+
+function allBeanReviews (req, res) {
+    Bean.find({'rating._id': req.params.id})
+    .sort('rating')
+      res.render('/home')
 }
