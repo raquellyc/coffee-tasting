@@ -32,6 +32,10 @@ body > main {
   overflow-y: scroll;
 }
 
+body > main h1:first-child {
+  margin-bottom: 50px;
+}
+
 nav > a {
   margin: 20px;
   text-decoration: none;
@@ -64,12 +68,10 @@ nav > a.active {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(2, minmax(auto, 15rem));
-  font-size: 20px;
-  padding: 5px;
-  border-radius: 5px;
 }
 
-#new-form * {
+#new-form *,
+#add-review-form * {
   font-size: 20px;
   padding: 5px;
   border-radius: 5px;
@@ -81,6 +83,38 @@ nav > a.active {
   margin-left: auto;
 }
 
+#show-page {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+}
+
+#show-page div:nth-child(even) {
+  font-weight: bold;
+}
+
+#add-review-form {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+#add-review-form input[type="submit"] {
+  width: 10rem;
+  grid-column: 2 / 3;
+}
+
+.review-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-user img {
+  border-radius: 50%;
+  height: 40px;
+}
 
 /* Start of collapse coffee method */
 

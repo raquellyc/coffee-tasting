@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
 <h1>Add A New Tasting Experience!</h1>
-<form id="new-form" action="/beans" method="post">
+<form id="new-form" action="/beans" method="POST">
 
     <label>Coffee origin/ Name:</label>
     <input type="text" name="coffeename">
@@ -38,16 +38,6 @@
     </select>
     <label>Beverage:</label>
     <textarea type="text" name="beverage"></textarea>
-    <label>Review:</label>
-    <textarea name="review"></textarea>
-    <label>Rating:</label>
-    <select name="rating">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
     <input type="submit" value="Add My Coffee">
 </form>
 

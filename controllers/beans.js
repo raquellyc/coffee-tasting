@@ -15,7 +15,9 @@ function index(req, res) {
 
 function show(req, res) {
     Bean.findById(req.params.id)
-        res.render('beans/show', { title: 'Bean Detail'});
+    .exec(function (err, bean) {
+        res.render('beans/show', { title: 'Bean Detail', bean});
+    });
 }
 
 function newBeans(req, res) {

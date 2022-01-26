@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const reviewSchema = new Schema({
-    content: String,
+const reviewsSchema = new Schema({
+    review: String,
     rating: {
       type: Number,
       min: 1,
@@ -28,7 +28,7 @@ const beanSchema = new Schema({
         enum: ['espresso', 'drip', 'pourover', 'press', 'coldbrew', 'cupping', 'aeropress', 'mokapot', 'vaccumpot', 'turkish', 'other']
     },
     beverage: String,
-    review: [reviewSchema],
+    reviews: [reviewsSchema],
 });
 
 module.exports = mongoose.model('Bean', beanSchema);
