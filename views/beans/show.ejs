@@ -37,6 +37,9 @@
     </table>
 </section>
 
+<a href="/beans/<%=bean._id%>/edit" >EDIT</a>
+
+
 <br><br><h2>Reviews</h2>
 <% if (user) { %>
     <form id="add-review-form" method="POST" action="/beans/<%= bean._id %>/reviews">

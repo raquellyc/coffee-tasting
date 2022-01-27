@@ -37,16 +37,24 @@ function create(req, res) {
 }
 
 function edit(req, res) {
-    Bean.findOneAndUpdate(
-        {_id: req.params.id, userRecommending: req.user._id},
-        req.body,
-        {new: true},
-        function(err, bean) {
-          if (err || !bean) return res.redirect('beans/edit');
-          res.redirect(`beans/${bean._id}`);
-        }
-      );
+    Bean.findById({_id: req.params.id}, function(err, bean) {
+        console.log('bean', bean)
+        if (err || !bean) return res.redirect('/beans');
+        res.render('beans/edit', {title: "edit coffee", bean });
+    });
 }
+
+// function update(req, res) {
+//     Bean.findOneAndUpdate(
+//         {_id: req.params.id, userRecommending: req.user._id},
+//         req.body,
+//         {new: true},
+//         function(err, bean) {
+//           if (err || !bean) return res.redirect('beans/edit');
+//           res.redirect(`beans/${bean._id}`);
+//         }
+//       );
+// }
 
 
 
