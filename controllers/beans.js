@@ -6,7 +6,8 @@ module.exports = {
     new: newBeans,
     create,
     index,
-    edit
+    edit,
+    update
 };
 
 function index(req, res) {
@@ -44,17 +45,17 @@ function edit(req, res) {
     });
 }
 
-// function update(req, res) {
-//     Bean.findOneAndUpdate(
-//         {_id: req.params.id, userRecommending: req.user._id},
-//         req.body,
-//         {new: true},
-//         function(err, bean) {
-//           if (err || !bean) return res.redirect('beans/edit');
-//           res.redirect(`beans/${bean._id}`);
-//         }
-//       );
-// }
+function update(req, res) {
+    Bean.findOneAndUpdate(
+        {_id: req.params.id, userRecommending: req.user._id},
+        req.body,
+        {new: true},
+        function(err, bean) {
+          if (err || !bean) return res.redirect('beans/edit');
+          res.redirect(`/beans/${bean._id}`);
+        }
+    );
+}
 
 
 

@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
 <h1>Edit your Tasting Experience!</h1>
-<form id="new-form" action="/beans" method="POST">
+<form id="new-form" action="/beans/<%= bean._id %>?_method=PUT" method="POST">
 
     <label>Coffee origin/ Name:</label>
     <input type="text" name="coffeename" value="<%=bean.coffeename%>">
@@ -38,6 +38,10 @@
     </select>
     <label>Beverage:</label>
     <input type="text" name="beverage" value="<%=bean.beverage%>"></input>
+
+    <button type="submit">update</button>
+
 </form>
+
 
 <%- include('../partials/footer') %>
