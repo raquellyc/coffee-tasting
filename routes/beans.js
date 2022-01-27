@@ -6,5 +6,6 @@ router.get('/', beansCtrl.index);
 router.get('/new', beansCtrl.new);
 router.get('/:id', beansCtrl.show);
 router.post('/', beansCtrl.create);
+router.get('/:id/edit', beansCtrl.edit)
 
 module.exports = router;

@@ -1,22 +1,18 @@
 * {
   box-sizing: border-box;
-  font-family: 'Josefin Slab', serif;  
-  color: #1b1003;
+  font-family: 'Spartan', sans-serif;
+  color: #494642;
 }
 
 body {
   margin: 0;
   height: 100vh;
-  /* display: grid;
-  grid-template-rows: 50px 1fr;
-  grid-template-areas: 
-    "nav"
-    "main" */
+  background-color: rgb(245, 237, 217);
 }
 
 body > nav {
   grid-area: nav;
-  background-color: #d1964c;
+  background-color: #a5c6e6;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -25,33 +21,26 @@ body > nav {
 
 body > main {
   grid-area: main;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
   overflow-y: scroll;
-}
-
-body > main h1:first-child {
-  margin-bottom: 50px;
 }
 
 nav > a {
   margin: 20px;
   text-decoration: none;
-  padding: 20px;
+  padding: 10px;
   border-radius: 5px;
 }
 
 nav > a:hover:not(.active) {
   color: white;
-  background-color: #d1a570;
+  background-color: #cdd2dd;
 }
 
 nav > a.active {
   color: white;
   cursor: default;
 }
+
 
 .login {
   display: flex;
@@ -129,13 +118,13 @@ nav > a.active {
   -webkit-box-pack: justify;
           justify-content: space-between;
   padding: 1em;
-  background: #bccfae;
+  background: #e0b43b;
   font-weight: bold;
   /* Icon */
 }
 
 .tab-label:hover {
-  background: #a7ca8d;
+  background: #e9cd80;
 }
 
 .tab-label::after {
@@ -157,7 +146,8 @@ nav > a.active {
 }
 
 input:checked + .tab-label {
-  background: #6b815a;
+  background: #daa105;
+  color: white;
 }
 
 input:checked + .tab-label::after {
@@ -178,6 +168,4 @@ input:checked ~ .tab-content {
 
 /* end of collapse coffee method */
 
-#home {
-  text-align: center;
-}
+

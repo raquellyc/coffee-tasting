@@ -1,0 +1,53 @@
+<%- include('../partials/header') %>
+
+<h1>Edit your Tasting Experience!</h1>
+<form id="new-form" action="/beans" method="POST">
+
+    <label>Coffee origin/ Name:</label>
+    <input type="text" name="coffeename" value="<%=bean.coffeename%>">
+    <label>Roaster:</label>
+    <input type="text" name="roaster" value="<%=bean.roaster%>">
+    <label>Roast:</label>
+    <select name="roast" value="<%=bean.roast%>">
+        <option value="green">Green</option>
+        <option value="blonde">Blonde</option>
+        <option value="light">Light</option>
+        <option value="medium">Medium</option>
+        <option value="medium-dark">Medium-Dark</option>
+        <option value="dark">Dark</option>        
+    </select>
+    <label>Roast Date:</label>
+    <input type="date" name="roastdate" value="<%=bean.roastdate%>">
+    <label>Brew Date:</label>
+    <input type="date" name="brewdate" value="<%=bean.brewdate%>">
+    <label>Price</label>
+    <input type="text" name="price" value="<%=bean.price%>">
+    <label>Brew Methods:</label>
+    <select name="brewmethod" value="<%=bean.brewmethod%>">
+        <option value="espresso">Espresso</option>
+        <option value="drip">Drip</option>
+        <option value="pourover">Pour-Over</option>
+        <option value="press">Press</option>
+        <option value="coldbrew">Cold Brew</option>
+        <option value="cupping">Cupping</option>       
+        <option value="aeropress">Aeropress</option>        
+        <option value="mokapot">Moka Pot</option>        
+        <option value="vaccumpot">Vaccum Pot/Siphon</option>        
+        <option value="turkish">Turkish</option>        
+        <option value="other">Other</option>
+    </select>
+    <label>Beverage:</label>
+    <textarea type="text" name="beverage" value="<%=bean.beverage%>"></textarea>
+    <input type="submit" value="Edit My Coffee">
+</form>
+
+<h1>Your Coffee Tasting Guide</h1>
+<p>Cup your hand over the coffee, hold the cup close<br>
+ to your nose and inhale. When tasting a coffee, it's<br> 
+ important to slurp it. Slurping sprays the coffee across <br> 
+ your entire palate and lets subtle flavors and aromas reach <br> 
+ your nose. Think about where you are experiencing flavors on <br> 
+ your tongue.
+</p>
+
+<%- include('../partials/footer') %>
