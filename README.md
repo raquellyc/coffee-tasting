@@ -11,7 +11,7 @@ The app is called "The little coffee club." Users can add a coffee tasting exper
 
 ## Technologies Used
 - Node 
-- Espress
+- Express
 - MongoDB
 
 ## Getting Started
