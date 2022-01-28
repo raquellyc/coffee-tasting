@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
       avgRating: b.reviews.reduce((sum, r) => sum + r.rating, 0) / b.reviews.length
     }));
     beans.sort((a, b) => b.avgRating - a.avgRating);
-    res.render('home', { title: 'THE LITTLE COFFEE CLUB', beans });
+    res.render('home', { title: '', beans });
   })
 });
 
